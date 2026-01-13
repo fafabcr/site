@@ -1,0 +1,793 @@
+body {
+    background-color:#373636;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: 0.4s;
+}
+
+
+body, html {
+    margin : 0;
+    padding : 0;
+}
+
+/* style du bouton mode nuit */
+.toggle-theme {
+    position: fixed;
+    bottom: 20px;
+    left:20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color:white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* effet quand on passe la souris dessus*/
+.toggle-theme:hover {
+    background-color:#ccc
+}
+
+
+/* style du tableur avec fond d'image */
+.container {
+    background-image: url('../images/imgcontainerModeNuit.jpeg');
+    background-size: cover;    /* L'image couvre toute la case */
+    background-position: center 70%;    /* Centre l'image */
+    
+    height:25vh;                  /*25% est la hauteur de la case */
+    width:100%;        /* Largeur complete */
+    display:flex;     /* Centrer le texte */
+    align-items: center;     /* Centre verticalement */
+    justify-content:center;     /* Centre horizontalement */
+    
+}
+
+
+/* style du menu de navigation */
+.main-nav ul {  
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #9c8585;
+}
+.main-nav ul li {
+    margin: 0 10px;
+}
+.main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+
+}
+.main-nav ul li a:hover {
+    background-color:rgba(159, 100, 100, 0.81);
+
+}
+
+
+
+/* Page d'accueil */
+
+body.accueil {
+    background-color:black;
+    color:white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Bannière */
+.fond-accueil {
+    height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position: relative;
+    overflow: hidden;   /* evite le débordement du flou */
+}
+
+/* image flou en arrière plan */
+.fond-accueil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/PageAccueil.webp');
+    background-size:cover;
+    background-position:center;
+    filter: blur(3px);         /* intensité du flou */
+    transform: scale(1.1);  /* evite les bords visibles après flou */
+    z-index: -1;      /* passe derrière le texte */
+}
+/* Titre */
+.fond-accueil h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:3.5em;
+    text-shadow: 1px 8px black;
+    margin-top:20px;
+    
+   
+}
+.fond-accueil h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.5em;             /* taille du h2 */
+    text-shadow: 3px 3px black;     /* décale l'ombre vers la droite, épaisseur de l'ombre */
+    margin-top:40px;
+   
+}
+
+
+
+
+/* Page 1 */
+
+.table-distribution {
+   float:right;
+   margin:  300px 50px 20px 30px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 55%; /* largeur du tableau, pas toute la page */
+}
+.table-distribution th, .table-distribution td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.table-distribution a:hover, .table-distribution a:link {
+    color:#afafaf;
+}
+.table-distribution a:visited {
+    color: white;
+}
+
+.objets-importants {
+    
+    margin: 15px 30px 20px 40px;  /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet {
+    float: left;
+    margin: 60px 15px 20px 40px;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet th, .table-objet td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.Les_Reliques{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(135, 94, 27);
+}
+.objet-signification {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(141, 122, 94);
+
+}
+
+.Les_Ombres_du_Coeur{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(189, 150, 87);
+}
+.perso-acteur-espece {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(255, 224, 176);
+
+}
+.table-affiche {
+   float:left;
+   margin:  15px 50px 20px 40px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+  
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 32%; /* largeur du tableau, pas toute la page */
+}
+.table-affiche th, .table-affiche td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.affiche {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(243, 205, 145);
+
+}
+
+
+
+
+/* Page 2 */
+.Le_Sang_des_Liens{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(8, 49, 64);
+}
+.perso-acteur-espece2 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(100, 137, 186);
+
+}
+.objets-importants-page2 {
+    float: right; /* place le tableau a gauche*/
+    margin: 15px 30px 20px 40px;  /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page2 {
+    float: left;
+    margin: 60px 15px 20px 40px;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page2 th, .table-objet-page2 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.Les_Reliques_page2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(8, 67, 85);
+}
+.objet-signification-page2 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(167, 193, 224);
+
+}
+.table-affiche-page2{
+   float:left;
+   margin:  15px 50px 20px 40px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+  
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 32%; /* largeur du tableau, pas toute la page */
+}
+.table-affiche-page2 th, .table-affiche-page2 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.affiche-page2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(35, 89, 176);
+
+}
+
+
+
+
+/* Page 3 */
+.Les_Immortels_Dechus{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color: rgb(76, 44, 125);
+}
+
+
+.Les_Originels {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 10px;
+    font-weight:bold;
+    background-color:rgb(123, 84, 187);
+
+
+}
+.perso-acteur-espece3 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(127, 118, 143);
+
+}
+
+.objets-importants-page3 {
+    float: right; /* place le tableau a gauche*/
+    margin: 15px 30px 20px 40px;  /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page3 {
+   float: left;
+   margin: 60px 15px 20px 40px;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   border: 3px solid black;   /* bordure visible  */
+   width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page3 th, .table-objet-page3 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.Les_Reliques_page3{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(66, 8, 85);
+}
+.objet-signification-page3 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(124, 97, 164);
+
+}
+.table-affiche-page3{
+   float:left;
+   margin:  15px 50px 20px 40px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 32%; /* largeur du tableau, pas toute la page */
+}
+.table-affiche-page3 th, .table-affiche-page3 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.affiche-page3 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(205, 172, 245);
+
+}
+
+
+
+
+
+
+/* Page 4 */
+.Le_Poids_de_LEternite {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(32, 40, 78);
+}
+
+.Les_Chasseurs {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 10px;
+    font-weight:bold;
+    background-color:rgb(51, 56, 81);
+}
+
+.perso-acteur-espece4 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(93, 88, 97);
+
+}
+.objets-importants-page4 {
+    float: right; /* place le tableau a gauche*/
+    margin: 15px 30px 20px 40px;  /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page4 {
+    float: left;
+    margin: 60px 15px 20px 40px;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page4 th, .table-objet-page4 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.Les_Reliques_page4{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(47, 32, 130);
+}
+.objet-signification-page4 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(111, 110, 140);
+
+} 
+.table-affiche-page4{
+   float:left;
+   margin:  15px 50px 20px 40px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 32%; /* largeur du tableau, pas toute la page */
+}
+.table-affiche-page4 th, .table-affiche-page4 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.affiche-page4 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(172, 169, 192);
+
+}
+
+
+
+
+
+
+
+
+/* Page 5 */
+.Les_Reflets_du_Destin{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(106, 8, 5);
+}
+.perso-acteur-espece5 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(154, 48, 29);
+
+}
+.objets-importants-page5 {
+    float: right; /* place le tableau a gauche*/
+    margin: 15px 30px 20px 40px;  /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page5 {
+    float: left;
+    margin: 60px 15px 20px 40px;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page5 th, .table-objet-page5 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.Les_Reliques_page5{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(130, 32, 32);
+}
+.objet-signification-page5 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(170, 70, 45);
+
+} 
+.table-affiche-page5{
+   float:left;
+   margin:  15px 50px 20px 40px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 32%; /* largeur du tableau, pas toute la page */
+}
+.table-affiche-page5 th, .table-affiche-page5 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.affiche-page5 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(182, 134, 124);
+
+}
+
+
+
+/* Page 6 */
+.Les_Echos_du_Passe{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(58, 110, 154);
+}
+
+.La_Congregation_des_Gemeaux {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 10px;
+    font-weight:bold;
+    background-color:rgb(100, 125, 145);
+}
+.perso-acteur-espece6 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(74, 139, 159);
+
+}
+.objets-importants-page6 {
+    float: right; /* place le tableau a gauche*/
+    margin: 15px 30px 20px 40px;  /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page6 {
+    float: left;
+    margin: 60px 15px 20px 40px;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page6 th, .table-objet-page6 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.Les_Reliques_page6{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(47, 93, 123);
+}
+.objet-signification-page6 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(110, 161, 179);
+
+} 
+.table-affiche-page6{
+   float:left;
+   margin:  15px 50px 20px 40px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 32%; /* largeur du tableau, pas toute la page */
+}
+.table-affiche-page6 th, .table-affiche-page6 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.affiche-page6 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(139, 155, 186);
+
+}
+
+
+
+
+/* Page 7 */
+.Les_Heritiers_de_la_Nuit{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(15, 71, 37);
+}
+
+.Les_Heretiques {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(60, 91, 73);
+}
+.perso-acteur-espece7 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(86, 105, 93);
+
+}
+.objets-importants-page7 {
+    float: right; /* place le tableau a gauche*/
+    margin: 15px 30px 20px 40px;  /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page7 {
+    float: left;
+    margin: 60px 15px 20px 40px;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page7 th, .table-objet-page7 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.Les_Reliques_page7{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(55, 84, 69);
+}
+.objet-signification-page7 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(134, 166, 149);
+
+} 
+.table-affiche-page7{
+   float:left;
+   margin:  15px 50px 20px 40px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 32%; /* largeur du tableau, pas toute la page */
+}
+.table-affiche-page7 th, .table-affiche-page7 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.affiche-page7 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(63, 128, 97);
+
+}
+
+
+
+
+/* Page 8 */
+.LHeure_du_Pardon{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(66, 59, 59);
+}
+.perso-acteur-espece8 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(98, 69, 69);
+
+}
+.objets-importants-page8 {
+    float: right; /* place le tableau a gauche*/
+    margin: 15px 30px 20px 40px;  /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid rgb(49, 30, 30);   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page8 {
+    float: left;
+    margin: 60px 15px 20px 40px;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+    border: 3px solid black;   /* bordure visible  */
+    width: 30%; /* largeur du tableau, pas toute la page */
+    
+}
+.table-objet-page8 th, .table-objet-page8 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.Les_Reliques_page8{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(72, 75, 74);
+}
+.objet-signification-page8 {
+    font-weight:bold;
+    color:black;
+    background-color:rgb(149, 149, 149);
+
+} 
+.table-affiche-page8{
+  float:left;
+   margin:  15px 50px 20px 40px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 32%; /* largeur du tableau, pas toute la page */
+}
+.table-affiche-page8 th, .table-affiche-page8 td {
+    border: 2px solid black;
+    padding: 10px; /* espace à l'intérieur des cellules */
+    text-align: center;
+   
+}
+.affiche-page8 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: 15px;
+    font-weight:bold;
+    background-color:rgb(76, 45, 45);
+
+}
+
+
+/* Page Inscription */
+.table-inscription {
+   float:center;
+   margin:  15px 50px 20px 30px ;   /* espace en haut, a droite, en bas, à gauche , centré horizontalement.  */
+   accent-color: rgb(114, 12, 12);
+   
+   border: 3px solid black;   /* bordure visible  */
+   width: 40%; /* largeur du tableau, pas toute la page */
+}
+.table-inscription td, .table-inscription h3 {
+    text-align: center;
+}
+
+
